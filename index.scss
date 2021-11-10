@@ -49,7 +49,7 @@ body {
       }
       h3 {
         font-size: 16px;
-        margin: 0 0 -40px 0;
+        margin: 0 0 -20px 0;
       }
     }
 
@@ -86,7 +86,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      .papper {
+      #paper {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -95,8 +95,9 @@ body {
         background: white;
         border-radius: 100%;
         border: 10px solid hsl(230, 89%, 62%);
+        transition: all 0.5s ease;
       }
-      .scissor {
+      #scissor {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -105,30 +106,52 @@ body {
         background: white;
         border-radius: 100%;
         border: 10px solid hsl(39, 89%, 49%);
+        transition: all 0.5s ease;
+      }
+      & :hover {
+        filter: drop-shadow(0 0 0.55rem white);
       }
     }
-  }
 
-  .rock {
-    .rock {
-      margin-top: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 140px;
-      height: 120px;
-      background: white;
-      border-radius: 100%;
-      border: 10px solid hsl(349, 71%, 52%);
-    }
-    & :hover {
-      box-shadow: 0px 0px 33px 50px rgba(255, 255, 255, 0.75);
+    .rock-container {
+      #rock {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 140px;
+        height: 120px;
+        background: white;
+        border-radius: 100%;
+        border: 10px solid hsl(349, 71%, 52%);
+        transition: all 0.5s ease;
+      }
+      & :hover {
+        filter: drop-shadow(0 0 0.55rem white);
+      }
     }
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
   body {
-    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    width: 50%;
+
+    .paper-scissors {
+      justify-content: space-around !important;
+    }
+
+    .score-board {
+      flex-direction: row !important;
+      align-content: center;
+      justify-content: center;
+      h3 {
+        margin: 0 !important;
+      }
+    }
   }
 }

@@ -50,7 +50,7 @@ body {
 }
 .container .score .score-board h3 {
   font-size: 16px;
-  margin: 0 0 -40px 0;
+  margin: 0 0 -20px 0;
 }
 .container .score .title {
   list-style: none;
@@ -83,7 +83,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.container .buttons .paper-scissors .papper {
+.container .buttons .paper-scissors #paper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,8 +92,9 @@ body {
   background: white;
   border-radius: 100%;
   border: 10px solid #4865f4;
+  transition: all 0.5s ease;
 }
-.container .buttons .paper-scissors .scissor {
+.container .buttons .paper-scissors #scissor {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,8 +103,12 @@ body {
   background: white;
   border-radius: 100%;
   border: 10px solid #ec9e0e;
+  transition: all 0.5s ease;
 }
-.container .rock .rock {
+.container .buttons .paper-scissors :hover {
+  filter: drop-shadow(0 0 0.55rem white);
+}
+.container .buttons .rock-container #rock {
   margin-top: 1rem;
   display: flex;
   align-items: center;
@@ -113,14 +118,31 @@ body {
   background: white;
   border-radius: 100%;
   border: 10px solid #dc2e4e;
+  transition: all 0.5s ease;
 }
-.container .rock :hover {
-  box-shadow: 0px 0px 33px 50px rgba(255, 255, 255, 0.75);
+.container .buttons .rock-container :hover {
+  filter: drop-shadow(0 0 0.55rem white);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
   body {
-    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    width: 50%;
+  }
+  .container .paper-scissors {
+    justify-content: space-around !important;
+  }
+  .container .score-board {
+    flex-direction: row !important;
+    align-content: center;
+    justify-content: center;
+  }
+  .container .score-board h3 {
+    margin: 0 !important;
   }
 }
 
