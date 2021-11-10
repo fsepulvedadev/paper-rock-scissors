@@ -17,24 +17,104 @@
         </ul>
         <div class="score-board">
           <h3>SCORE</h3>
-          <p>120</p>
+          <p id="scoreBoard">0</p>
         </div>
       </div>
-      <div class="buttons">
-        <div class="paper-scissors">
-          <div class="papper">
-            <img src="./icons/icon-paper.svg" alt="" srcset="" />
-          </div>
-          <div class="scissor">
-            <img src="./icons/icon-scissors.svg" alt="" srcset="" />
+      <div class="winner">
+        <h1 id="winner"></h1>
+      </div>
+      <div id="result" class="hidden">
+        <div class="user">
+          <h1>YOU</h1>
+          <div class="buttons">
+            <div class="paper-scissors-result">
+              <div id="paper" class="papperUser">
+                <img
+                  class="papper"
+                  src="./icons/icon-paper.svg"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <div id="scissor" class="scissorUser">
+                <img
+                  class="scissor"
+                  src="./icons/icon-scissors.svg"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <div id="rock" class="rockUser">
+                <img
+                  class="rock"
+                  src="./icons/icon-rock.svg"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+            </div>
           </div>
         </div>
-        <div class="rock">
-          <div class="rock">
-            <img src="./icons/icon-rock.svg" alt="" srcset="" />
+        <div class="computer">
+          <h1>COMPUTER</h1>
+          <div class="buttons">
+            <div class="paper-scissors-result">
+              <div id="paper" class="papper papperComputer">
+                <img
+                  class="papper"
+                  src="./icons/icon-paper.svg"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <div id="scissor" class="scissor scissorComputer">
+                <img
+                  class="scissor"
+                  src="./icons/icon-scissors.svg"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <div id="rock" class="rock rockComputer">
+                <img
+                  class="rock"
+                  src="./icons/icon-rock.svg"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nextRound hidden">
+        <h3>
+          Ronda <br />
+          <span>1</span> /3
+        </h3>
+        <button id="nextRound">Siguiente Ronda</button>
+      </div>
+      <div id="start-buttons" class="buttons">
+        <div class="paper-scissors">
+          <div id="paper" class="papper startPapper">
+            <img class="papper" src="./icons/icon-paper.svg" alt="" srcset="" />
+          </div>
+          <div id="scissor" class="scissor startScissor">
+            <img
+              class="scissor"
+              src="./icons/icon-scissors.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+        <div class="rock-container">
+          <div id="rock" class="rock startRock">
+            <img class="rock" src="./icons/icon-rock.svg" alt="" srcset="" />
           </div>
         </div>
       </div>
     </div>
+    <script src="./index.js"></script>
   </body>
 </html>
